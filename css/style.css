@@ -1,0 +1,320 @@
+body{
+    background-image: url(../img/4049039.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    background-image: url(../img/FINAL\ FINAL\ FINAL\ \(1\).gif);
+    background-size: 37.5rem 31.25rem;
+    background-repeat: no-repeat;
+    background-color: white;
+    filter: invert(100%);
+    height: 18.75rem;
+    width: 100%;
+    margin-block-end: 0.625rem;
+    margin-block-start: 0rem;
+    background-position: center;
+}
+
+/*Inicio de estilos para el MENÚ*/
+
+/*Estilo para el botón responsivo, el none no aparece cuando esta en tamaño de pantalla del PC*/
+#btn-menu{
+    display: none;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-left: 1px solid black;
+}
+/*Cuando sobre pasa el mouse cambia de color el background del icono*/
+header label:hover{
+    cursor: pointer;
+    background: #2ec7d6;
+}
+
+/*Modificación del ancho para el menú*/
+.ancho{
+    width: 80%;
+    height: 70px;
+    margin: auto;
+}
+
+/*Crear una tipo caja para el texto que es OnyxCuu*/
+.logo{
+    width: 30%;
+    height: 70px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.logo p{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+/*Color, tamaño, fuente al texto OnyxCuu*/
+.logo p a{
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: raleway;
+}
+
+.logo p a:hover{
+    color: red;
+}
+
+/*Esto es para que el menú sea responsivo*/
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+
+/*Le pone una línea al lado cada sección*/
+.menu li{
+    border-right: 1px solid black;
+}
+
+/*Color, tamaño, quitar subrayado, separación, negritas y fuente al menú*/
+.menu li a{
+    display: block;
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: raleway;
+}
+
+/*Cuando el cursor del mouse pasa sobre el menú cambia de color*/
+nav ul li a:hover{
+    color: red;
+}
+/*Descargar la fuente*/
+@font-face{
+    font-family: raleway;
+    src: url(../fuentes/Raleway-Regular.ttf);
+    
+}
+
+@media(max-width:768px){
+
+    /*Cuando es responsivo aparece el icono menú*/
+    header label{
+        display: block;
+    }
+
+    /*Cuando es responsivo quita los menú*/
+    .menu{
+        position: absolute;
+        background: darkgrey;
+        width: 80%;
+        margin-left: -100%;
+        transition: all 0.5s;
+        
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+
+    /*Cuando es responsivo quita el texto OnyxCUU*/
+    .logo{
+        margin-left: -100%;
+    }
+
+    /*Llamar a menú clickeando al icono*/
+    #btn-menu:checked ~ * .menu{
+        margin: 0;
+        
+      }
+}
+/*Final de estilos para el MENÚ*/
+
+
+/*Contenedores que van de derecha a izquierda*/
+.textoizquierda{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5vw;
+}
+
+.textoizquierdasub{
+    margin: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+}
+
+.contenedorizquierda{
+    width: 100%;
+    height: 40vw;
+    border-radius: 10px;
+    animation-duration: 1.5s;
+    animation-name: izquierda;
+    display: flex;
+}
+
+/*Animacion*/
+@keyframes izquierda{
+    from{
+        margin-left: 10%;
+        width: 90%;
+        opacity: 0%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+        opacity: 100%;
+    }
+} 
+
+.contenedortextoi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.botonizquierda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+button{
+    font-size: 2vw;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+button:hover{
+    box-shadow: 0px 0px 20px 10px rgb(0, 132, 255);
+}
+
+/*Contenedores que van de izquierda a derecha*/
+.contenedorderecha{
+    width: 100%;
+    height: 40vw;
+    border-radius: 10px;
+    animation-duration: 1.5s;
+    animation-name: derecha;
+    display: flex;
+}
+
+/*Animacion*/
+@keyframes derecha{
+    from{
+        width: 90%;
+        opacity: 0%;
+    }
+    to{
+        width: 100%;
+        opacity: 100%;
+    }
+}
+
+.contenedortextod{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.textoderecha{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5vw;
+}
+
+.textoderechasub{
+    margin: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+}
+
+.botonderecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+/*Formato de imagenes de la pagina*/
+img{
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 100%;
+    min-width: 35%;
+    max-width: 35%;    
+}
+/*pie de pagina*/
+/*Iconos de contactos*/
+.contactos ul{
+    display: flex;
+    list-style-type: none;
+    padding-top: 2.5rem;
+    
+}
+
+.contactos ul li a{
+    height: 50px;
+    width: 50px;
+}
+
+.iconos{
+    filter: invert(100%);
+    width: 200px;
+    border-radius: 10px;
+}
+
+/*Personalizacion de la barra deslizante*/
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 5px;
+    animation-name: colorfull;
+}
+
+.Botonsaber{
+    text-decoration: none;
+    color: white;
+}

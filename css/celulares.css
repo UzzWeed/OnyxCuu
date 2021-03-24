@@ -1,0 +1,233 @@
+/*Background tamaño, no repetir, responsivo, expandir*/
+body{
+    background-image: url(../img/retro.jpg);
+    background-size: 100rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Inicio de estilos para el MENÚ*/
+
+/*Estilo para el botón responsivo, el none no aparece cuando esta en tamaño de pantalla del PC*/
+#btn-menu{
+    display: none;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-left: 1px solid white;
+}
+/*Cuando sobre pasa el mouse cambia de color el background del icono*/
+header label:hover{
+    cursor: pointer;
+    background: #2ec7d6;
+}
+
+/*Modificación del ancho para el menú*/
+.ancho{
+    width: 80%;
+    height: 70px;
+    margin: auto;
+}
+
+/*Crear una tipo caja para el texto que es OnyxCuu*/
+.logo{
+    width: 30%;
+    height: 70px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.logo p{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+/*Color, tamaño, fuente al texto OnyxCuu*/
+.logo p a{
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: raleway;
+}
+
+.logo p a:hover{
+    color: #2ec7d6;
+}
+
+/*Esto es para que el menú sea responsivo*/
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+
+/*Le pone una línea al lado cada sección*/
+.menu li{
+    border-right: 1px solid white;
+}
+
+
+/*Color, tamaño, quitar subrayado, separación, negritas y fuente al menú*/
+.menu li a{
+    display: block;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: raleway;
+}
+
+/*Cuando el cursor del mouse pasa sobre el menú cambia de color*/
+nav ul li a:hover{
+    color: #2ec7d6;
+}
+/*Descargar la fuente*/
+@font-face{
+    font-family: raleway;
+    src: url(../fuentes/Raleway-Regular.ttf);
+    
+}
+
+@media(max-width:768px){
+
+    /*Cuando es responsivo aparece el icono menú*/
+    header label{
+        display: block;
+    }
+
+    /*Cuando es responsivo quita los menú*/
+    .menu{
+        position: absolute;
+        background: rgb(63, 7, 63);
+        width: 80%;
+        margin-left: -100%;
+        transition: all 0.5s;
+        
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+
+    /*Cuando es responsivo quita el texto OnyxCUU*/
+    .logo{
+        margin-left: -100%;
+    }
+
+    /*Llamar a menú clickeando al icono*/
+    #btn-menu:checked ~ * .menu{
+        margin: 0;
+        
+      }
+
+}
+
+
+/*Final de estilos para el MENÚ*/
+
+
+/*******/
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/*Lo separa unos 20px del menú*/
+#banner{
+    margin-top: 20px;
+}
+
+/*Tamaño de la imagen principal*/
+#banner img{
+    width: 50%;
+    height: 50%;
+    transition: all 0.5s ease;
+}
+
+/*Animación, reduce el tamaño al pasar el mouse*/
+#banner img:hover{
+    transform: scale(0.9);
+}
+
+/*Posición del titulo*/
+#banner .titulo{
+    position: absolute;
+    top: 50%;
+    left: 73.5%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+}
+
+/*Tamaño, fuente y tipo para el h2 de Celulares*/
+#banner h2{
+    font-size: 4rem;
+    font-family: raleway;
+    /*Pone delgada la fuente*/
+    font-weight: lighter;
+    
+}
+/*Acomodo de todo el contenido, con un flex y quede centrado en la web*/
+#blog .contenido{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+/*Cada articulo esta separado por 80px y pone los textos centrado*/
+#blog article{
+    margin: 80px;
+    text-align: center;  
+}
+
+/*Cada articulo contiene una imagen, se le da su tamaño y su máximo de anchura */
+#blog img{
+ width: 100%;
+ max-width: 280px;
+ transition: all 0.5s ease;
+}
+
+#blog img:hover{
+    transform: scale(0.9);
+}
+
+/*Color y fuente para los títulos del contenido*/
+#blog article h4{
+    color: white;
+    font-family: raleway;    
+}
+
+/*Fuente, color y maxima anchura para la descripcion de cada título del contenido*/
+#blog article p{
+    color: white;
+    font-family: raleway;
+    max-width: 280px;
+}
+
+/*Descargar la fuente*/
+@font-face{
+    font-family: raleway;
+    src: url(../fuentes/Raleway-Regular.ttf);
+    
+}
+
+/*Personalizacion de la barra deslizante*/
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: rgb(182, 56, 255);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 5px;
+    animation-name: colorfull;
+}
